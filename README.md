@@ -52,3 +52,12 @@ The screenshot below shows the successful execution of all four GitHub Actions j
 The screenshot below shows the successful execution of automated unit tests using pytest.
 
 ![Successful Unit Tests](test-results.png)
+
+
+## Running Application Screenshot
+
+The screenshot below shows the Flask application
+successfully deployed and running on Render.
+
+![Running Flask Application](application.png)
+
