@@ -61,3 +61,18 @@ successfully deployed and running on Render.
 
 ![Running Flask Application](application.png)
 
+
+## CI/CD Workflow Diagram
+
+```mermaid
+flowchart TD
+    A[Push to GitHub] --> B[Build]
+    B --> C[Unit Tests]
+    C --> D{Tests Passed?}
+    D -- Yes --> E[Deploy to Render]
+    D -- No --> F[Pipeline Failed]
+    E --> G[Health Check]
+    G --> H[Monitoring Log]
+```
+
+
