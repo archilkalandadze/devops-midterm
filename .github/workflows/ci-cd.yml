@@ -55,3 +55,28 @@ jobs:
           fi
           curl --fail --show-error --silent \
             -X POST "$DEPLOY_HOOK"
+
+            
+  monitor:
+    needs: deploy
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Check application health
+        run: python monitor.py
+
+      - name: Upload monitoring log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: monitoring-log
+          path: monitor.log
+          if-no-files-found: warn
