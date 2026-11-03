@@ -37,3 +37,10 @@ https://devops-midterm.onrender.com/health
 
 ## Repository
 https://github.com/archilkalandadze/devops-midterm
+
+
+## CI/CD Pipeline Screenshot
+
+The screenshot below shows the successful execution of all four GitHub Actions jobs: Build, Test, Deploy, and Monitor.
+
+![Successful CI/CD Pipeline](image.png)
