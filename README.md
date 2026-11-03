@@ -44,3 +44,9 @@ https://github.com/archilkalandadze/devops-midterm
 The screenshot below shows the successful execution of all four GitHub Actions jobs: Build, Test, Deploy, and Monitor.
 
 ![Successful CI/CD Pipeline](image.png)
+
+## Unit Test Results
+
+The screenshot below shows the successful execution of automated unit tests using pytest.
+
+![Successful Unit Tests](test-results.png)
